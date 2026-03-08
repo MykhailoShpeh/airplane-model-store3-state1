@@ -17,7 +17,8 @@ export function PlanesList({ items }) {
         <List>
             {items.map(item =>
                 <Item
-                    key={item.id} >
+                    key={item.id} yearOfManufacture={item.info.year}>
+                    {/* // key={item.id}> */}
                     <Planes
                         urlWiki={item.url.wikipedia}
                         urlMain={item.url.main}

@@ -3,11 +3,13 @@ import styled from '@emotion/styled';
 export const TextField = styled.p`
 font-size: 18px;
 font-weight: 700;
+display: flex;
+gap: 20px:
 
 svg {   
-    margin-bottom: -8px;
-    margin-right: 5px;
-    color: #9b25fc;
+    min-width: ${props => props.theme.iconSize.md}px;
+    // color: ${props => props.theme.iconColor.textfield};
+    color: red;
 }
 `
 
@@ -31,7 +33,9 @@ svg {
 }
 `
 export const PlaneTitle = styled.h3`
-margin-bottom: 12px;
+// margin-bottom: 12px;
+/*//! Налаштування відступів - spacing */
+    margin-bottom: ${props => props.theme.spacing(3)};
     padding: 12px 16px;
     font-size: 32px;
     text-align: center;

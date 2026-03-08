@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 
+import { getBgColorEmotion } from '@/utils/getBackgroundColor.js'
+
 export const List = styled.ul`
 margin-left: 10px;
     margin-right: 10px;
@@ -10,15 +12,45 @@ margin-left: 10px;
     outline: 1px solid red;
 `
 
+//todo: backgroundColor: '#ffdb92', ---> "year" до 1946
+//todo: backgroundColor: '#d2fdbd', ---> "year" від 1946 і до 1999
+//todo: backgroundColor: '#d6f1ff', ---> "year" від 2000  */
+//! Функція для зміни кольору фону
+// //todo: var.2
+// function getBgColorEmotion({ yearOfManufacture }) {
+//     // console.log("@emotion/styled_yearOfManufacture:", yearOfManufacture); //!
+//     let bgColor = '#ffdb92';
+//     if (yearOfManufacture > 1945) bgColor = '#d2fdbd';
+//     if (yearOfManufacture > 1999) bgColor = '#d6f1ff';
+//     return bgColor;
+// };
+
+
+
 export const Item = styled.li`
 display: grid;
     gap: 12px;
     padding: 10px;
-    background-color: #ffdb92;
+    // background-color: #ffdb92;
     outline: 1px solid grey;
-`
-/* year до 1946 */
-/* backgroundColor: '#d2fdbd'; // year  1946 - 1999
-          backgroundColor: '#d6f1ff'; // year від 2000 */
-/* backgroundColor: getBgColor(item.info.year); */
+    
 
+
+    /*//! Пропси від: <PlanesItem key={item.id} yearOfManufacture={item.info.year}>*/
+    ${(props) => console.log("props.yearOfManufacture:", props.yearOfManufacture)} 
+    ${(props) => console.log("props.children.props.year:", props.children.props.year)}
+    ${(props) => console.log("props:", props)}
+background-color: ${getBgColorEmotion};
+
+`
+
+// //todo: var.1
+// background - color: ${
+//     ({ yearOfManufacture }) => {
+//         // console.log("@emotion/styled_yearOfManufacture:", yearOfManufacture); //!
+//         let bgColor = '#ffdb92';
+//         if (yearOfManufacture > 1945) bgColor = '#d2fdbd';
+//         if (yearOfManufacture > 1999) bgColor = '#d6f1ff';
+//         return bgColor;
+//     }
+// };

@@ -15,5 +15,6 @@ export const TitleRobotoBold = styled.h2`
      font-family: "Roboto", cursive;
     font-weight: 700;
     font-style: normal;
-    color: darkgreen;
+    // color: darkgreen;
+    color: ${props => props.theme.fontColor.mainTitle};
 `
