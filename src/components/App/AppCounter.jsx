@@ -13,7 +13,8 @@ export function AppCounter() {
                 </div>
             </div> */}
 
-            <Counter/>
+            <Counter />
+            <Counter initialValue={10} />
         </>
     );
 };
