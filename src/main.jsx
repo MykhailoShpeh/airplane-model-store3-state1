@@ -9,8 +9,8 @@ import { AppCounter } from '@/components/App/AppCounter.jsx';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter basename="/airplane-model-store3-state1">
-      {/* <App /> */}
-      <AppCounter />
+      <App />
+      {/* <AppCounter /> */}
 
     </BrowserRouter>
   </StrictMode >
